@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Course Feedback</title>
+</head>
+<body>
+
+  <!-- 1. Line 10: Closing tag </head> was incorrectly placed after <h1>. Fixed to </header>.
+    2. Line 20: <td>Rating</td> inside <thead> row changed to <th>Rating</th> for semantic consistency.
+    3. Line 26: Missing closing </tr> tag for Week 1 row. Added </tr>.
+    4. Line 28: <td colspan="3"> for Week 2 overflowed table columns and missed rating cell. Removed colspan and added missing rating <td> cell.
+    5. Line 32: Malformed tags <td>Semantic HTML<td>4.0</td>. Fixed to <td>Semantic HTML</td><td>4.0</td>.
+    6. Line 39: <label for="name"> mismatched id="fullname". Fixed label 'for' attribute to "fullname".
+    7. Line 42 & 44: Radio buttons had different names ("good" & "poor"), allowing multiple selections. Grouped both under name="rating".
+    8. Line 47: <label for="labs"> mismatched id="lab". Fixed label 'for' attribute to "lab".
+    9. Line 49: Typo in closing tag </from>. Corrected to </form>.
+    10. Line 52: Invalid HTML entity &copy. Fixed to &copy;. -->
+
+  <!-- Page Header -->
+  <header>
+    <h1>CSF3133 Course Feedback</h1>
+  </header>
+
+  <nav>
+    <a href="#results">Results</a> | 
+    <a href="#comments">Comments</a> | 
+    <a href="#form">Feedback Form</a>
+  </nav>
+
+  <!-- Feedback Summary Table -->
+  <section id="results">
+    <h2>Feedback Summary</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Week</th>
+          <th>Topic</th>
+          <th>Rating</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Introduction to HTML</td>
+          <td>4.5</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Tables and Forms</td>
+          <td>4.2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Semantic HTML</td>
+          <td>4.0</td>
+        </tr>
+        <!-- Extended Part 2: Added Week 4 & Week 5 with rowspan="2" on Topic -->
+        <tr>
+          <td>4</td>
+          <td rowspan="2">Mini Project</td>
+          <td>4.8</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>4.6</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        
+        <tr>
+          <td colspan="2">Average Rating</td>
+          <td>4.42</td>
+        </tr>
+      </tfoot>
+    </table>
+  </section>
+
+  <!-- Student Comments Section -->
+  <section id="comments">
+    <h2>Student Comments</h2>
+    <article>
+      <h3>Ahmad Zaki</h3>
+      <p>The practical sessions on HTML forms and tables were very engaging and clear.</p>
+    </article>
+    <article>
+      <h3>Siti Sarah</h3>
+      <p> learning semantic HTML helped me understand proper document structure much better.</p>
+    </article>
+  </section>
+
+  <!-- Feedback Form -->
+  <section id="form">
+    <h2>Give Your Feedback</h2>
+    <form action="submit_feedback.php" method="post">
+      
+      <!-- Name Input -->
+      <label for="fullname">Name:</label><br>
+      <input type="text" id="fullname" name="name"><br><br>
+
+      <!-- E-mail Input -->
+      <label for="email">E-mail:</label><br>
+      <input type="email" id="email" name="email"><br><br>
+
+      <!-- Section / Group Selection -->
+      <label for="section">Section/Group:</label><br>
+      <select id="section" name="section">
+        <option value="">-- Select Section --</option>
+        <option value="sec01">Section 01</option>
+        <option value="sec02">Section 02</option>
+        <option value="sec03">Section 03</option>
+      </select><br><br>
+
+      <!-- Overall Rating -->
+      <label>Overall rating:</label><br>
+      <input type="radio" id="good" name="rating" value="good">
+      <label for="good">Good</label><br>
+      
+      <input type="radio" id="poor" name="rating" value="poor">
+      <label for="poor">Poor</label><br>
+          
+      <input type="radio" id="average" name="rating" value="average">
+      <label for="average">Average</label><br><br>
+
+      <label>Topics I want more practice on:</label><br>
+      <input type="checkbox" id="topic1" name="practice[]" value="tables">
+      <label for="topic1">HTML Tables</label><br>
+      
+      <input type="checkbox" id="topic2" name="practice[]" value="forms">
+      <label for="topic2">HTML Forms</label><br>
+      
+      <input type="checkbox" id="topic3" name="practice[]" value="semantic">
+      <label for="topic3">Semantic Tags</label><br><br>
+
+      <!-- Lab Attendance Checkbox -->
+      <input type="checkbox" id="lab" name="lab" value="yes">
+      <label for="lab">I attended all labs</label><br><br>
+
+      <!-- Submit -->
+      <input type="submit" value="Submit">
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Copyright &copy; 2026 CSF3133</p>
+  </footer>
+
+</body>
+</html>
