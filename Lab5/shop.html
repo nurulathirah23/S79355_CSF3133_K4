@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Campus Bookstore</title>
+    <!-- Combined Google Fonts link for Roboto (body) and Merriweather (headings) -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- External stylesheet link -->
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+
+    <!--
+      Error 1 (shop.html, Line 9): Incorrect rel attribute value <link rel="stylesheets" ...> (should be "stylesheet").
+      Error 2 (shop.html, Line 14): Invalid inline color syntax <h1 style="color=#1B4F72;"> (missing colon, should be color: #1B4F72;).
+      Error 3 (shop.html, Line 14): Title was styled inline instead of letting external/internal CSS or correct syntax apply.
+      Error 4 (shop.html, Line 11): Navigation list <ul> was unstyled and floating directly without proper container/class rules.
+      Error 5 (shop.html, Line 22): Table missing border-collapse and proper structural styling causing double borders.
+      Error 6 (shop.css, Line 1): Background image configuration in shop.css missing non-repeat and positioning rules.
+      Error 7 (shop.css, Line 5): Table cells missing proper padding and alternate row background colors.
+      Error 8 (shop.css, Line 12): Navigation links missing hover pseudo-class effects.
+      Error 9 (shop.css, Line 15): Body missing font-family declaration for Roboto.
+      Error 10 (shop.css, Line 20): Table prices missing right-alignment.
+    -->
+
+    <header class="site-header">
+        <h1>Campus Bookstore</h1>
+        <p class="tagline">Textbooks, stationery and more for every student.</p>
+    </header>
+
+    <nav aria-label="Main navigation">
+        <div class="nav-inner">
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#books">Books</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h2>Available Products</h2>
+
+        <table id="product">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Category</th>
+                    <th>Price (RM)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Web Design Basics</td>
+                    <td>Textbook</td>
+                    <td>45.00</td>
+                </tr>
+                <tr>
+                    <td>A4 Notebook</td>
+                    <td>Stationery</td>
+                    <td>6.50</td>
+                </tr>
+                <tr>
+                    <td>USB Drive 32GB</td>
+                    <td>Gadget</td>
+                    <td>25.00</td>
+                </tr>
+                <tr>
+                    <td>Highlighter Set</td>
+                    <td>Stationery</td>
+                    <td>9.90</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <footer>&copy; 2026 Campus Bookstore</footer>
+</body>
+</html>

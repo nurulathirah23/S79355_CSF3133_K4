@@ -1,0 +1,143 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fbfaf5;
+    color: #222222;
+    margin: 0;
+}
+
+/* Header banner with cover background image and white text */
+.site-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("books.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+/* Main page title using Merriweather */
+.site-header h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.4rem;
+    margin: 0 0 8px 0;
+}
+
+/* Tagline inside header */
+.tagline {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Navigation bar container */
+nav {
+    background-color: #2c2f2d;
+    overflow: hidden;
+}
+
+/* Align nav links with main content container */
+.nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 18px;
+    text-decoration: none;
+}
+
+/* Hover effect for non-active links */
+nav li a:hover:not(.active) {
+    background-color: #111111;
+}
+
+/* Active link styling */
+nav li a.active {
+    background-color: #04AA6D;
+    color: #ffffff;
+}
+
+/* Main content area */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px 50px 20px;
+}
+
+/* Section heading with Merriweather */
+h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.6rem;
+    margin: 0 0 18px 0;
+    color: #111111;
+}
+
+/* Paragraph line-height requirement */
+p {
+    line-height: 1.6;
+}
+
+/* Table base styling and collapsed borders */
+#product {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+/* Table cells padding and borders */
+#product th,
+#product td {
+    border-bottom: 1px solid #e2e2e2;
+    padding: 12px 16px;
+    text-align: left;
+}
+
+/* Uppercase, centred table header with 12px top/bottom padding */
+#product th {
+    background-color: #04AA6D;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: none;
+}
+
+/* Right-align Price (RM) column */
+#product td:last-child {
+    text-align: right;
+}
+
+/* Alternating row colour on even rows */
+#product tbody tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+/* Hover highlight on table rows */
+#product tbody tr:hover {
+    background-color: #e8e8e8;
+}
+
+/* Footer styling */
+footer {
+    background-color: #efefef;
+    color: #333333;
+    text-align: center;
+    padding: 16px 10px;
+}
